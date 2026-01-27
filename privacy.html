@@ -23,8 +23,8 @@
         </div>
         <div class="header__right">
           <nav class="nav" aria-label="Primary">
-            <a class="nav__link" href="./index.html#support">Support</a>
-            <a class="nav__link" href="./terms.html">Terms</a>
+            <a class="nav__link" href="./index.html#support" data-edit="nav.support">Support</a>
+            <a class="nav__link" href="./terms.html" data-edit="nav.terms">Terms</a>
           </nav>
 
           <div class="lang" aria-label="Language">
@@ -39,36 +39,43 @@
 
     <main id="main" class="section">
       <div class="container">
-        <h1 class="section__title">Privacy Policy</h1>
+        <h1 class="section__title" data-edit="privacy.title">Privacy Policy</h1>
         <p class="section__subtitle">
-          Effective date: <strong>January 27, 2026</strong>
+          <span data-edit="privacy.effectiveLabel">Effective date:</span>
+          <strong data-edit="privacy.effectiveDate">January 27, 2026</strong>
         </p>
 
         <div class="support__card">
-          <p class="muted">
+          <p class="muted" data-edit="privacy.intro">
             This page is a simple privacy overview for the Churomi extension. If you need a
             more formal policy for the Chrome Web Store, tell us what data you collect and we’ll
             tailor it.
           </p>
 
-          <h3>What we collect</h3>
+          <h3 data-edit="privacy.collectTitle">What we collect</h3>
           <ul>
-            <li>Account email (for sign-in and support).</li>
-            <li>Basic billing status (to show membership state).</li>
-            <li>Technical logs for debugging (limited and security-focused).</li>
+            <li data-edit="privacy.collectItems.0">Account email (for sign-in and support).</li>
+            <li data-edit="privacy.collectItems.1">Basic billing status (to show membership state).</li>
+            <li data-edit="privacy.collectItems.2">
+              Technical logs for debugging (limited and security-focused).
+            </li>
           </ul>
 
-          <h3>How we use it</h3>
+          <h3 data-edit="privacy.useTitle">How we use it</h3>
           <ul>
-            <li>Authenticate you and show your subscription/membership status.</li>
-            <li>Provide customer support and resolve account issues.</li>
-            <li>Prevent abuse and keep the service secure.</li>
+            <li data-edit="privacy.useItems.0">
+              Authenticate you and show your subscription/membership status.
+            </li>
+            <li data-edit="privacy.useItems.1">Provide customer support and resolve account issues.</li>
+            <li data-edit="privacy.useItems.2">Prevent abuse and keep the service secure.</li>
           </ul>
 
-          <h3>Contact</h3>
+          <h3 data-edit="privacy.contactTitle">Contact</h3>
           <p>
-            Questions? Email
-            <a href="mailto:churomi.support@gmail.com">churomi.support@gmail.com</a>.
+            <span data-edit="privacy.contactLabel">Questions? Email</span>
+            <a data-edit-mailto="support.email" href="mailto:churomi.support@gmail.com"
+              >churomi.support@gmail.com</a
+            >.
           </p>
         </div>
       </div>
@@ -78,7 +85,7 @@
       <div class="container footer__inner">
         <p class="muted">© <span id="year"></span> Churomi</p>
         <p class="footer__links">
-          <a href="./index.html">Home</a>
+          <a href="./index.html" data-edit="footer.home">Home</a>
         </p>
       </div>
     </footer>

@@ -23,8 +23,8 @@
         </div>
         <div class="header__right">
           <nav class="nav" aria-label="Primary">
-            <a class="nav__link" href="./index.html#support">支持</a>
-            <a class="nav__link" href="./terms.html">条款</a>
+            <a class="nav__link" href="./index.html#support" data-edit="nav.support">支持</a>
+            <a class="nav__link" href="./terms.html" data-edit="nav.terms">条款</a>
           </nav>
 
           <div class="lang" aria-label="Language">
@@ -39,33 +39,38 @@
 
     <main id="main" class="section">
       <div class="container">
-        <h1 class="section__title">隐私政策</h1>
-        <p class="section__subtitle">生效日期：<strong>2026 年 1 月 27 日</strong></p>
+        <h1 class="section__title" data-edit="privacy.title">隐私政策</h1>
+        <p class="section__subtitle">
+          <span data-edit="privacy.effectiveLabel">生效日期：</span>
+          <strong data-edit="privacy.effectiveDate">2026 年 1 月 27 日</strong>
+        </p>
 
         <div class="support__card">
-          <p class="muted">
+          <p class="muted" data-edit="privacy.intro">
             本页面提供 Churomi 扩展的简要隐私说明。若你需要用于 Chrome Web Store
             的更正式隐私政策，请告诉我们你收集哪些数据，我们可以帮你完善。
           </p>
 
-          <h3>我们收集的信息</h3>
+          <h3 data-edit="privacy.collectTitle">我们收集的信息</h3>
           <ul>
-            <li>账号邮箱（用于登录与客服支持）。</li>
-            <li>基础订阅/账单状态（用于展示会员状态）。</li>
-            <li>用于排障的技术日志（有限且以安全为目标）。</li>
+            <li data-edit="privacy.collectItems.0">账号邮箱（用于登录与客服支持）。</li>
+            <li data-edit="privacy.collectItems.1">基础订阅/账单状态（用于展示会员状态）。</li>
+            <li data-edit="privacy.collectItems.2">用于排障的技术日志（有限且以安全为目标）。</li>
           </ul>
 
-          <h3>我们如何使用这些信息</h3>
+          <h3 data-edit="privacy.useTitle">我们如何使用这些信息</h3>
           <ul>
-            <li>用于身份验证并展示订阅/会员状态。</li>
-            <li>用于提供客服支持与解决账号问题。</li>
-            <li>用于防止滥用并保障服务安全。</li>
+            <li data-edit="privacy.useItems.0">用于身份验证并展示订阅/会员状态。</li>
+            <li data-edit="privacy.useItems.1">用于提供客服支持与解决账号问题。</li>
+            <li data-edit="privacy.useItems.2">用于防止滥用并保障服务安全。</li>
           </ul>
 
-          <h3>联系</h3>
+          <h3 data-edit="privacy.contactTitle">联系</h3>
           <p>
-            如有疑问，请邮件联系
-            <a href="mailto:churomi.support@gmail.com">churomi.support@gmail.com</a>。
+            <span data-edit="privacy.contactLabel">如有疑问，请邮件联系</span>
+            <a data-edit-mailto="support.email" href="mailto:churomi.support@gmail.com"
+              >churomi.support@gmail.com</a
+            >。
           </p>
         </div>
       </div>
@@ -75,7 +80,7 @@
       <div class="container footer__inner">
         <p class="muted">© <span id="year"></span> Churomi</p>
         <p class="footer__links">
-          <a href="./index.html">主页</a>
+          <a href="./index.html" data-edit="footer.home">主页</a>
         </p>
       </div>
     </footer>

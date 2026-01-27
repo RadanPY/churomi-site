@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Churomi Site Admin</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/churomi-32.png" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./admin.css" />
+  </head>
+  <body class="admin">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="container header__inner">
+        <div class="brand" aria-label="Churomi">
+          <div class="brand__mark" aria-hidden="true">
+            <img src="../assets/churomi-48.png" alt="" width="34" height="34" />
+          </div>
+          <span class="brand__name">Churomi Site Admin</span>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="../index.html">Home</a>
+          <a class="nav__link" href="../zh/index.html">中文</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container">
+        <h1 class="section__title">Edit without HTML</h1>
+        <p class="section__subtitle">
+          Edit the modules on your site and publish changes to GitHub Pages.
+        </p>
+
+        <div class="admin-card">
+          <div class="admin-grid">
+            <div class="admin-field">
+              <label for="pageSelect">Page</label>
+              <select id="pageSelect">
+                <option value="home">Home</option>
+                <option value="privacy">Privacy</option>
+                <option value="terms">Terms</option>
+              </select>
+            </div>
+
+            <div class="admin-field">
+              <label for="langSelect">Language</label>
+              <select id="langSelect">
+                <option value="en">English (EN)</option>
+                <option value="zh">简体中文 (ZH)</option>
+              </select>
+            </div>
+
+            <div class="admin-actions">
+              <button class="btn btn--soft" id="reloadBtn" type="button">Reload</button>
+              <button class="btn btn--ghost" id="downloadBtn" type="button">Download HTML</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-card">
+          <details>
+            <summary>Publish (GitHub)</summary>
+            <p class="muted admin-hint">
+              This site is hosted on GitHub Pages. To publish changes from here, create a
+              <strong>fine-grained</strong> GitHub token with access to the repo
+              <code>RadanPY/churomi-site</code> (Contents: Read &amp; Write), then paste it below.
+              Don’t use this on shared computers.
+            </p>
+
+            <div class="admin-grid admin-grid--publish">
+              <div class="admin-field">
+                <label for="tokenInput">GitHub token</label>
+                <input
+                  id="tokenInput"
+                  type="password"
+                  placeholder="github_pat_..."
+                  autocomplete="off"
+                />
+              </div>
+              <div class="admin-field">
+                <label for="commitInput">Commit message</label>
+                <input id="commitInput" type="text" value="Update churomi.com content" />
+              </div>
+              <div class="admin-actions admin-actions--publish">
+                <button class="btn btn--primary" id="publishBtn" type="button">Publish</button>
+              </div>
+            </div>
+
+            <pre class="admin-log" id="log" aria-live="polite"></pre>
+          </details>
+        </div>
+
+        <div class="admin-card">
+          <h2 class="section__title admin-title">Modules</h2>
+          <div id="modules"></div>
+        </div>
+
+        <div class="admin-card">
+          <details>
+            <summary>Preview</summary>
+            <p class="muted admin-hint">Preview updates before publishing.</p>
+            <iframe class="admin-preview" id="previewFrame" title="Preview"></iframe>
+          </details>
+        </div>
+      </div>
+    </main>
+
+    <script src="./admin.js"></script>
+  </body>
+</html>
+

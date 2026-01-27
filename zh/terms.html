@@ -23,8 +23,8 @@
         </div>
         <div class="header__right">
           <nav class="nav" aria-label="Primary">
-            <a class="nav__link" href="./privacy.html">隐私</a>
-            <a class="nav__link" href="./index.html#support">支持</a>
+            <a class="nav__link" href="./privacy.html" data-edit="nav.privacy">隐私</a>
+            <a class="nav__link" href="./index.html#support" data-edit="nav.support">支持</a>
           </nav>
 
           <div class="lang" aria-label="Language">
@@ -39,28 +39,33 @@
 
     <main id="main" class="section">
       <div class="container">
-        <h1 class="section__title">使用条款</h1>
-        <p class="section__subtitle">生效日期：<strong>2026 年 1 月 27 日</strong></p>
+        <h1 class="section__title" data-edit="terms.title">使用条款</h1>
+        <p class="section__subtitle">
+          <span data-edit="terms.effectiveLabel">生效日期：</span>
+          <strong data-edit="terms.effectiveDate">2026 年 1 月 27 日</strong>
+        </p>
 
         <div class="support__card">
-          <p class="muted">
+          <p class="muted" data-edit="terms.intro">
             本页面为 Churomi 扩展的简要条款说明。正式版本完成后可替换。
           </p>
 
-          <h3>仅在允许的场景中使用</h3>
-          <p>
+          <h3 data-edit="terms.allowedTitle">仅在允许的场景中使用</h3>
+          <p data-edit="terms.allowedText">
             你需要确保使用 Churomi 时遵守适用于你的环境的规则与政策（学校、工作场所、考试平台等）。
           </p>
 
-          <h3>服务可用性</h3>
-          <p>
+          <h3 data-edit="terms.availabilityTitle">服务可用性</h3>
+          <p data-edit="terms.availabilityText">
             本服务按“现状”提供，可能会变更或中断。我们会尽力保持稳定，但无法保证持续、不间断可用。
           </p>
 
-          <h3>联系</h3>
+          <h3 data-edit="terms.contactTitle">联系</h3>
           <p>
-            如需支持，请邮件联系
-            <a href="mailto:churomi.support@gmail.com">churomi.support@gmail.com</a>。
+            <span data-edit="terms.contactLabel">如需支持，请邮件联系</span>
+            <a data-edit-mailto="support.email" href="mailto:churomi.support@gmail.com"
+              >churomi.support@gmail.com</a
+            >。
           </p>
         </div>
       </div>
@@ -70,7 +75,7 @@
       <div class="container footer__inner">
         <p class="muted">© <span id="year"></span> Churomi</p>
         <p class="footer__links">
-          <a href="./index.html">主页</a>
+          <a href="./index.html" data-edit="footer.home">主页</a>
         </p>
       </div>
     </footer>

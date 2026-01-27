@@ -28,11 +28,11 @@
 
         <div class="header__right">
           <nav class="nav" aria-label="Primary">
-            <a class="nav__link" href="#features">Features</a>
-            <a class="nav__link" href="#install">Install</a>
-            <a class="nav__link" href="#support">Support</a>
-            <a class="nav__link" href="./privacy.html">Privacy</a>
-            <a class="nav__link" href="./terms.html">Terms</a>
+            <a class="nav__link" href="#features" data-edit="nav.features">Features</a>
+            <a class="nav__link" href="#install" data-edit="nav.install">Install</a>
+            <a class="nav__link" href="#support" data-edit="nav.support">Support</a>
+            <a class="nav__link" href="./privacy.html" data-edit="nav.privacy">Privacy</a>
+            <a class="nav__link" href="./terms.html" data-edit="nav.terms">Terms</a>
           </nav>
 
           <div class="lang" aria-label="Language">
@@ -49,24 +49,32 @@
       <section class="hero">
         <div class="container hero__inner">
           <div class="hero__copy">
-            <p class="hero__eyebrow">Browser extension</p>
-            <h1 class="hero__title">
+            <p class="hero__eyebrow" data-edit="hero.eyebrow">Browser extension</p>
+            <h1 class="hero__title" data-edit="hero.title">
               Stay signed in. Manage membership. Keep supported pages active.
             </h1>
             <p class="hero__subtitle">
-              Churomi helps you sign in, manage billing, and keep supported pages
-              from pausing when switching tabs.
-              <strong>Use only where allowed.</strong>
+              <span data-edit="hero.subtitle">
+                Churomi helps you sign in, manage billing, and keep supported pages from pausing
+                when switching tabs.
+              </span>
+              <strong data-edit="hero.subtitleStrong">Use only where allowed.</strong>
             </p>
 
             <div class="hero__cta">
-              <a class="btn btn--primary" href="#install">Get Churomi</a>
-              <a class="btn btn--ghost" href="#features">See features</a>
+              <a class="btn btn--primary" href="#install" data-edit="hero.ctaPrimary"
+                >Get Churomi</a
+              >
+              <a class="btn btn--ghost" href="#features" data-edit="hero.ctaSecondary"
+                >See features</a
+              >
             </div>
 
             <p class="hero__note">
-              Need help? Email
-              <a href="mailto:churomi.support@gmail.com">churomi.support@gmail.com</a>.
+              <span data-edit="hero.helpLabel">Need help? Email</span>
+              <a data-edit-mailto="support.email" href="mailto:churomi.support@gmail.com"
+                >churomi.support@gmail.com</a
+              >.
             </p>
           </div>
 
@@ -75,31 +83,32 @@
               <div class="card__header">
                 <div class="pill">
                   <span class="pill__dot" aria-hidden="true"></span>
-                  <span>Membership</span>
+                  <span data-edit="preview.membership">Membership</span>
                 </div>
-                <div class="pill pill--soft">Signed in</div>
+                <div class="pill pill--soft" data-edit="preview.signedIn">Signed in</div>
               </div>
               <div class="card__body">
                 <div class="row">
-                  <div class="row__label">Hide activity</div>
+                  <div class="row__label" data-edit="preview.hideActivity">Hide activity</div>
                   <div class="toggle" aria-hidden="true">
                     <span class="toggle__thumb"></span>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="row__label">Invisible mode</div>
+                  <div class="row__label" data-edit="preview.invisibleMode">Invisible mode</div>
                   <div class="toggle toggle--off" aria-hidden="true">
                     <span class="toggle__thumb"></span>
                   </div>
                 </div>
                 <div class="card__actions">
-                  <span class="chip">Menu</span>
-                  <span class="chip chip--primary">Refresh</span>
-                  <span class="chip">Log out</span>
+                  <span class="chip" data-edit="preview.menu">Menu</span>
+                  <span class="chip chip--primary" data-edit="preview.refresh">Refresh</span>
+                  <span class="chip" data-edit="preview.logout">Log out</span>
                 </div>
               </div>
               <div class="card__footer">
-                <span class="muted">Tip:</span> Keep it enabled only when you're permitted to.
+                <span class="muted" data-edit="preview.tipLabel">Tip:</span>
+                <span data-edit="preview.tipText">Keep it enabled only when you're permitted to.</span>
               </div>
             </div>
           </div>
@@ -108,8 +117,8 @@
 
       <section id="features" class="section">
         <div class="container">
-          <h2 class="section__title">Features</h2>
-          <p class="section__subtitle">
+          <h2 class="section__title" data-edit="features.title">Features</h2>
+          <p class="section__subtitle" data-edit="features.subtitle">
             Simple controls, clear status, and a clean UI.
           </p>
 
@@ -118,8 +127,8 @@
               <div class="feature__icon" aria-hidden="true">
                 <img src="./assets/state-red-48.png" alt="" width="22" height="22" />
               </div>
-              <h3 class="feature__title">Clear status</h3>
-              <p class="feature__text">
+              <h3 class="feature__title" data-edit="features.items.0.title">Clear status</h3>
+              <p class="feature__text" data-edit="features.items.0.text">
                 See if you're signed in, how many devices are active, and what's enabled at a
                 glance.
               </p>
@@ -129,8 +138,8 @@
               <div class="feature__icon" aria-hidden="true">
                 <img src="./assets/churomi-48.png" alt="" width="22" height="22" />
               </div>
-              <h3 class="feature__title">Membership & billing</h3>
-              <p class="feature__text">
+              <h3 class="feature__title" data-edit="features.items.1.title">Membership & billing</h3>
+              <p class="feature__text" data-edit="features.items.1.text">
                 Manage your plan and view billing-related actions from the Menu.
               </p>
             </article>
@@ -139,8 +148,8 @@
               <div class="feature__icon" aria-hidden="true">
                 <img src="./assets/state-dark-48.png" alt="" width="22" height="22" />
               </div>
-              <h3 class="feature__title">Keep pages active</h3>
-              <p class="feature__text">
+              <h3 class="feature__title" data-edit="features.items.2.title">Keep pages active</h3>
+              <p class="feature__text" data-edit="features.items.2.text">
                 Helps supported pages avoid pausing when you switch tabs.
               </p>
             </article>
@@ -152,8 +161,8 @@
         <div class="container">
           <div class="cta">
             <div>
-              <h2 class="section__title">Install Churomi</h2>
-              <p class="section__subtitle">
+              <h2 class="section__title" data-edit="install.title">Install Churomi</h2>
+              <p class="section__subtitle" data-edit="install.subtitle">
                 Install from the Chrome Web Store and sign in to get started.
               </p>
             </div>
@@ -164,9 +173,13 @@
                 href="https://chromewebstore.google.com/detail/churomi/oolnblmnhadiikagmhoahdaoiednoodk"
                 target="_blank"
                 rel="noopener noreferrer"
+                data-edit="install.primaryButton"
+                data-edit-href="install.cwsUrl"
                 >Chrome Web Store</a
               >
-              <a class="btn btn--ghost" href="#support">Contact support</a>
+              <a class="btn btn--ghost" href="#support" data-edit="install.secondaryButton"
+                >Contact support</a
+              >
             </div>
           </div>
         </div>
@@ -174,30 +187,37 @@
 
       <section id="support" class="section">
         <div class="container">
-          <h2 class="section__title">Support</h2>
-          <p class="section__subtitle">
+          <h2 class="section__title" data-edit="support.title">Support</h2>
+          <p class="section__subtitle" data-edit="support.subtitle">
             Questions, billing help, or account issues.
           </p>
 
           <div class="support">
             <div class="support__card">
-              <h3>Contact</h3>
-              <p class="muted">
+              <h3 data-edit="support.contactTitle">Contact</h3>
+              <p class="muted" data-edit="support.contactText">
                 Email us and include your account email + a screenshot when possible.
               </p>
               <p class="support__links">
-                <a class="btn btn--soft" href="mailto:churomi.support@gmail.com"
+                <a
+                  class="btn btn--soft"
+                  data-edit-mailto="support.email"
+                  href="mailto:churomi.support@gmail.com"
                   >churomi.support@gmail.com</a
                 >
               </p>
             </div>
 
             <div class="support__card">
-              <h3>Policies</h3>
-              <p class="muted">Quick links for transparency.</p>
+              <h3 data-edit="support.policiesTitle">Policies</h3>
+              <p class="muted" data-edit="support.policiesText">Quick links for transparency.</p>
               <p class="support__links">
-                <a class="btn btn--soft" href="./privacy.html">Privacy Policy</a>
-                <a class="btn btn--soft" href="./terms.html">Terms</a>
+                <a class="btn btn--soft" href="./privacy.html" data-edit="support.privacyButton"
+                  >Privacy Policy</a
+                >
+                <a class="btn btn--soft" href="./terms.html" data-edit="support.termsButton"
+                  >Terms</a
+                >
               </p>
             </div>
           </div>
@@ -209,8 +229,8 @@
       <div class="container footer__inner">
         <p class="muted">© <span id="year"></span> Churomi</p>
         <p class="footer__links">
-          <a href="./privacy.html">Privacy</a>
-          <a href="./terms.html">Terms</a>
+          <a href="./privacy.html" data-edit="footer.privacy">Privacy</a>
+          <a href="./terms.html" data-edit="footer.terms">Terms</a>
         </p>
       </div>
     </footer>
