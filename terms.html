@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Churomi — Terms</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="container header__inner">
+        <div class="brand" aria-label="Churomi">
+          <div class="brand__mark" aria-hidden="true"></div>
+          <a class="brand__name" href="./index.html" style="text-decoration: none">Churomi</a>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="./privacy.html">Privacy</a>
+          <a class="nav__link" href="./index.html#support">Support</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container">
+        <h1 class="section__title">Terms</h1>
+        <p class="section__subtitle">Effective date: <strong>January 27, 2026</strong></p>
+
+        <div class="support__card">
+          <p class="muted">
+            This is a lightweight terms page for the Churomi extension. Replace with your final
+            legal terms when ready.
+          </p>
+
+          <h3>Use only where allowed</h3>
+          <p>
+            You are responsible for ensuring your use of Churomi complies with the rules and
+            policies that apply to your environment (school, workplace, testing platform, etc.).
+          </p>
+
+          <h3>Service availability</h3>
+          <p>
+            The service is provided “as is” and may change or be interrupted. We work to keep it
+            stable, but we can’t guarantee uninterrupted availability.
+          </p>
+
+          <h3>Contact</h3>
+          <p>
+            For support, email
+            <a href="mailto:churomi.support@gmail.com">churomi.support@gmail.com</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> Churomi</p>
+        <p class="footer__links">
+          <a href="./index.html">Home</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Churomi — Privacy Policy</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="container header__inner">
+        <div class="brand" aria-label="Churomi">
+          <div class="brand__mark" aria-hidden="true"></div>
+          <a class="brand__name" href="./index.html" style="text-decoration: none">Churomi</a>
+        </div>
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="./index.html#support">Support</a>
+          <a class="nav__link" href="./terms.html">Terms</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container">
+        <h1 class="section__title">Privacy Policy</h1>
+        <p class="section__subtitle">
+          Effective date: <strong>January 27, 2026</strong>
+        </p>
+
+        <div class="support__card">
+          <p class="muted">
+            This page is a simple privacy overview for the Churomi extension. If you need a
+            more formal policy for the Chrome Web Store, tell us what data you collect and we’ll
+            tailor it.
+          </p>
+
+          <h3>What we collect</h3>
+          <ul>
+            <li>Account email (for sign-in and support).</li>
+            <li>Basic billing status (to show membership state).</li>
+            <li>Technical logs for debugging (limited and security-focused).</li>
+          </ul>
+
+          <h3>How we use it</h3>
+          <ul>
+            <li>Authenticate you and show your subscription/membership status.</li>
+            <li>Provide customer support and resolve account issues.</li>
+            <li>Prevent abuse and keep the service secure.</li>
+          </ul>
+
+          <h3>Contact</h3>
+          <p>
+            Questions? Email
+            <a href="mailto:churomi.support@gmail.com">churomi.support@gmail.com</a>.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> Churomi</p>
+        <p class="footer__links">
+          <a href="./index.html">Home</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Churomi is a browser extension to sign in, manage membership, and keep supported pages active. Use only where allowed."
+    />
+    <title>Churomi</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header">
+      <div class="container header__inner">
+        <div class="brand" aria-label="Churomi">
+          <div class="brand__mark" aria-hidden="true"></div>
+          <span class="brand__name">Churomi</span>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <a class="nav__link" href="#features">Features</a>
+          <a class="nav__link" href="#install">Install</a>
+          <a class="nav__link" href="#support">Support</a>
+          <a class="nav__link" href="./privacy.html">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="hero__eyebrow">Browser extension</p>
+            <h1 class="hero__title">
+              Stay signed in. Manage membership. Keep supported pages active.
+            </h1>
+            <p class="hero__subtitle">
+              Churomi helps you sign in, manage billing, and keep supported pages
+              from pausing when switching tabs.
+              <strong>Use only where allowed.</strong>
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#install">Get Churomi</a>
+              <a class="btn btn--ghost" href="#features">See features</a>
+            </div>
+
+            <p class="hero__note">
+              Need help? Email
+              <a href="mailto:churomi.support@gmail.com">churomi.support@gmail.com</a>.
+            </p>
+          </div>
+
+          <div class="hero__card" aria-label="Preview">
+            <div class="card">
+              <div class="card__header">
+                <div class="pill">
+                  <span class="pill__dot" aria-hidden="true"></span>
+                  <span>Membership</span>
+                </div>
+                <div class="pill pill--soft">Signed in</div>
+              </div>
+              <div class="card__body">
+                <div class="row">
+                  <div class="row__label">Hide activity</div>
+                  <div class="toggle" aria-hidden="true">
+                    <span class="toggle__thumb"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row__label">Invisible mode</div>
+                  <div class="toggle toggle--off" aria-hidden="true">
+                    <span class="toggle__thumb"></span>
+                  </div>
+                </div>
+                <div class="card__actions">
+                  <span class="chip">Menu</span>
+                  <span class="chip chip--primary">Refresh</span>
+                  <span class="chip">Log out</span>
+                </div>
+              </div>
+              <div class="card__footer">
+                <span class="muted">Tip:</span> Keep it enabled only when you’re
+                permitted to.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <h2 class="section__title">Features</h2>
+          <p class="section__subtitle">
+            Simple controls, clear status, and a clean UI.
+          </p>
+
+          <div class="grid">
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path
+                    d="M12 3a7 7 0 0 1 7 7v1.2a4 4 0 0 0 1 2.7l.5.6A1.5 1.5 0 0 1 19.3 18H4.7a1.5 1.5 0 0 1-1.2-2.5l.5-.6a4 4 0 0 0 1-2.7V10a7 7 0 0 1 7-7Zm0 19a3 3 0 0 0 2.8-2H9.2A3 3 0 0 0 12 22Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="feature__title">Clear status</h3>
+              <p class="feature__text">
+                See if you’re signed in, how many devices are active, and what’s
+                enabled at a glance.
+              </p>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path
+                    d="M7 2h10a2 2 0 0 1 2 2v16l-4-2-3 2-3-2-4 2V4a2 2 0 0 1 2-2Zm2 6h6v2H9V8Zm0 4h6v2H9v-2Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="feature__title">Membership & billing</h3>
+              <p class="feature__text">
+                Manage your plan and view billing-related actions from the Menu.
+              </p>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path
+                    d="M12 3a9 9 0 1 1-9 9h2a7 7 0 1 0 7-7V3Zm1 5h-2v6l5 3 1-1.7-4-2.3V8Z"
+                  />
+                </svg>
+              </div>
+              <h3 class="feature__title">Keep pages active</h3>
+              <p class="feature__text">
+                Helps supported pages avoid pausing when you switch tabs.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="install" class="section section--alt">
+        <div class="container">
+          <div class="cta">
+            <div>
+              <h2 class="section__title">Install Churomi</h2>
+              <p class="section__subtitle">
+                Install from the Chrome Web Store and sign in to get started.
+              </p>
+            </div>
+
+            <div class="cta__actions">
+              <a class="btn btn--primary" href="#" id="cwsLink">Chrome Web Store</a>
+              <a class="btn btn--ghost" href="#support">Contact support</a>
+            </div>
+          </div>
+
+          <div class="note">
+            <strong>Tip:</strong> Replace the “Chrome Web Store” link with your
+            listing URL once it’s ready.
+          </div>
+        </div>
+      </section>
+
+      <section id="support" class="section">
+        <div class="container">
+          <h2 class="section__title">Support</h2>
+          <p class="section__subtitle">
+            Questions, billing help, or account issues.
+          </p>
+
+          <div class="support">
+            <div class="support__card">
+              <h3>Contact</h3>
+              <p class="muted">
+                Email us and include your account email + a screenshot when possible.
+              </p>
+              <p class="support__links">
+                <a class="btn btn--soft" href="mailto:churomi.support@gmail.com"
+                  >churomi.support@gmail.com</a
+                >
+              </p>
+            </div>
+
+            <div class="support__card">
+              <h3>Policies</h3>
+              <p class="muted">Quick links for transparency.</p>
+              <p class="support__links">
+                <a class="btn btn--soft" href="./privacy.html">Privacy Policy</a>
+                <a class="btn btn--soft" href="./terms.html">Terms</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> Churomi</p>
+        <p class="footer__links">
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+      const cwsLink = document.getElementById("cwsLink");
+      // Replace with your Chrome Web Store listing URL.
+      cwsLink.setAttribute("href", "#");
+    </script>
+  </body>
+</html>
+
