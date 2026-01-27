@@ -88,6 +88,14 @@ a:hover {
   gap: 16px;
 }
 
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -121,6 +129,36 @@ a:hover {
   gap: 14px;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.lang {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.lang__link {
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--muted);
+}
+
+.lang__link:hover,
+.lang__link:focus-visible {
+  outline: none;
+  background: rgba(236, 72, 153, 0.12);
+  color: var(--text);
+}
+
+.lang__link--active {
+  background: rgba(236, 72, 153, 0.14);
+  color: var(--text);
 }
 
 .nav__link {

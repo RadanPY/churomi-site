@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Churomi - 隐私政策</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/churomi-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/churomi-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/churomi-48.png" />
+    <link rel="apple-touch-icon" href="../assets/churomi-128.png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="header">
+      <div class="container header__inner">
+        <div class="brand" aria-label="Churomi">
+          <div class="brand__mark" aria-hidden="true">
+            <img src="../assets/churomi-48.png" alt="" width="34" height="34" />
+          </div>
+          <a class="brand__name" href="./index.html" style="text-decoration: none">Churomi</a>
+        </div>
+        <div class="header__right">
+          <nav class="nav" aria-label="Primary">
+            <a class="nav__link" href="./index.html#support">支持</a>
+            <a class="nav__link" href="./terms.html">条款</a>
+          </nav>
+
+          <div class="lang" aria-label="Language">
+            <a class="lang__link" href="../privacy.html">EN</a>
+            <a class="lang__link lang__link--active" href="./privacy.html" aria-current="page"
+              >简体中文</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="section">
+      <div class="container">
+        <h1 class="section__title">隐私政策</h1>
+        <p class="section__subtitle">生效日期：<strong>2026 年 1 月 27 日</strong></p>
+
+        <div class="support__card">
+          <p class="muted">
+            本页面提供 Churomi 扩展的简要隐私说明。若你需要用于 Chrome Web Store
+            的更正式隐私政策，请告诉我们你收集哪些数据，我们可以帮你完善。
+          </p>
+
+          <h3>我们收集的信息</h3>
+          <ul>
+            <li>账号邮箱（用于登录与客服支持）。</li>
+            <li>基础订阅/账单状态（用于展示会员状态）。</li>
+            <li>用于排障的技术日志（有限且以安全为目标）。</li>
+          </ul>
+
+          <h3>我们如何使用这些信息</h3>
+          <ul>
+            <li>用于身份验证并展示订阅/会员状态。</li>
+            <li>用于提供客服支持与解决账号问题。</li>
+            <li>用于防止滥用并保障服务安全。</li>
+          </ul>
+
+          <h3>联系</h3>
+          <p>
+            如有疑问，请邮件联系
+            <a href="mailto:churomi.support@gmail.com">churomi.support@gmail.com</a>。
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> Churomi</p>
+        <p class="footer__links">
+          <a href="./index.html">主页</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Churomi 是一个浏览器扩展，用于登录、管理会员，并在切换标签页时帮助支持的页面保持活跃。仅在允许的场景中使用。"
+    />
+    <title>Churomi</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/churomi-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/churomi-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="../assets/churomi-48.png" />
+    <link rel="apple-touch-icon" href="../assets/churomi-128.png" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="header">
+      <div class="container header__inner">
+        <div class="brand" aria-label="Churomi">
+          <div class="brand__mark" aria-hidden="true">
+            <img src="../assets/churomi-48.png" alt="" width="34" height="34" />
+          </div>
+          <span class="brand__name">Churomi</span>
+        </div>
+
+        <div class="header__right">
+          <nav class="nav" aria-label="Primary">
+            <a class="nav__link" href="#features">功能</a>
+            <a class="nav__link" href="#install">安装</a>
+            <a class="nav__link" href="#support">支持</a>
+            <a class="nav__link" href="./privacy.html">隐私</a>
+            <a class="nav__link" href="./terms.html">条款</a>
+          </nav>
+
+          <div class="lang" aria-label="Language">
+            <a class="lang__link" href="../index.html">EN</a>
+            <a class="lang__link lang__link--active" href="./index.html" aria-current="page"
+              >简体中文</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="hero__eyebrow">浏览器扩展</p>
+            <h1 class="hero__title">保持登录。管理会员。让支持的页面保持活跃。</h1>
+            <p class="hero__subtitle">
+              Churomi 帮助你登录、管理订阅，并在切换标签页时让支持的页面避免暂停。
+              <strong>仅在允许的场景中使用。</strong>
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#install">获取 Churomi</a>
+              <a class="btn btn--ghost" href="#features">查看功能</a>
+            </div>
+
+            <p class="hero__note">
+              需要帮助？请邮件联系
+              <a href="mailto:churomi.support@gmail.com">churomi.support@gmail.com</a>。
+            </p>
+          </div>
+
+          <div class="hero__card" aria-label="Preview">
+            <div class="card">
+              <div class="card__header">
+                <div class="pill">
+                  <span class="pill__dot" aria-hidden="true"></span>
+                  <span>会员</span>
+                </div>
+                <div class="pill pill--soft">已登录</div>
+              </div>
+              <div class="card__body">
+                <div class="row">
+                  <div class="row__label">隐藏活动</div>
+                  <div class="toggle" aria-hidden="true">
+                    <span class="toggle__thumb"></span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="row__label">隐身模式</div>
+                  <div class="toggle toggle--off" aria-hidden="true">
+                    <span class="toggle__thumb"></span>
+                  </div>
+                </div>
+                <div class="card__actions">
+                  <span class="chip">菜单</span>
+                  <span class="chip chip--primary">刷新</span>
+                  <span class="chip">退出</span>
+                </div>
+              </div>
+              <div class="card__footer">
+                <span class="muted">提示：</span>仅在允许的场景中开启。
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <h2 class="section__title">功能</h2>
+          <p class="section__subtitle">简单控制、清晰状态、干净界面。</p>
+
+          <div class="grid">
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <img src="../assets/state-red-48.png" alt="" width="22" height="22" />
+              </div>
+              <h3 class="feature__title">状态清晰</h3>
+              <p class="feature__text">一眼看到登录状态、设备数量，以及哪些功能已开启。</p>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <img src="../assets/churomi-48.png" alt="" width="22" height="22" />
+              </div>
+              <h3 class="feature__title">会员与账单</h3>
+              <p class="feature__text">在菜单中管理订阅，并查看与账单相关的操作。</p>
+            </article>
+
+            <article class="feature">
+              <div class="feature__icon" aria-hidden="true">
+                <img src="../assets/state-dark-48.png" alt="" width="22" height="22" />
+              </div>
+              <h3 class="feature__title">保持页面活跃</h3>
+              <p class="feature__text">在切换标签页时，帮助支持的页面避免暂停。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="install" class="section section--alt">
+        <div class="container">
+          <div class="cta">
+            <div>
+              <h2 class="section__title">安装 Churomi</h2>
+              <p class="section__subtitle">从 Chrome 商店安装并登录即可开始使用。</p>
+            </div>
+
+            <div class="cta__actions">
+              <a
+                class="btn btn--primary"
+                href="https://chromewebstore.google.com/detail/churomi/oolnblmnhadiikagmhoahdaoiednoodk"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Chrome 商店</a
+              >
+              <a class="btn btn--ghost" href="#support">联系支持</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="support" class="section">
+        <div class="container">
+          <h2 class="section__title">支持</h2>
+          <p class="section__subtitle">问题、账单协助或账号相关事项。</p>
+
+          <div class="support">
+            <div class="support__card">
+              <h3>联系</h3>
+              <p class="muted">请在邮件中附上你的账号邮箱，并尽量提供截图。</p>
+              <p class="support__links">
+                <a class="btn btn--soft" href="mailto:churomi.support@gmail.com"
+                  >churomi.support@gmail.com</a
+                >
+              </p>
+            </div>
+
+            <div class="support__card">
+              <h3>政策</h3>
+              <p class="muted">透明度相关的快速链接。</p>
+              <p class="support__links">
+                <a class="btn btn--soft" href="./privacy.html">隐私政策</a>
+                <a class="btn btn--soft" href="./terms.html">条款</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted">© <span id="year"></span> Churomi</p>
+        <p class="footer__links">
+          <a href="./privacy.html">隐私</a>
+          <a href="./terms.html">条款</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+    </script>
+  </body>
+</html>
