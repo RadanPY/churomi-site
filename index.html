@@ -8,6 +8,10 @@
       content="Churomi is a browser extension to sign in, manage membership, and keep supported pages active. Use only where allowed."
     />
     <title>Churomi</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/churomi-16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/churomi-32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="./assets/churomi-48.png" />
+    <link rel="apple-touch-icon" href="./assets/churomi-128.png" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
@@ -16,7 +20,9 @@
     <header class="header">
       <div class="container header__inner">
         <div class="brand" aria-label="Churomi">
-          <div class="brand__mark" aria-hidden="true"></div>
+          <div class="brand__mark" aria-hidden="true">
+            <img src="./assets/churomi-48.png" alt="" width="34" height="34" />
+          </div>
           <span class="brand__name">Churomi</span>
         </div>
 
@@ -25,6 +31,7 @@
           <a class="nav__link" href="#install">Install</a>
           <a class="nav__link" href="#support">Support</a>
           <a class="nav__link" href="./privacy.html">Privacy</a>
+          <a class="nav__link" href="./terms.html">Terms</a>
         </nav>
       </div>
     </header>
@@ -83,8 +90,7 @@
                 </div>
               </div>
               <div class="card__footer">
-                <span class="muted">Tip:</span> Keep it enabled only when you’re
-                permitted to.
+                <span class="muted">Tip:</span> Keep it enabled only when you're permitted to.
               </div>
             </div>
           </div>
@@ -101,26 +107,18 @@
           <div class="grid">
             <article class="feature">
               <div class="feature__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" focusable="false">
-                  <path
-                    d="M12 3a7 7 0 0 1 7 7v1.2a4 4 0 0 0 1 2.7l.5.6A1.5 1.5 0 0 1 19.3 18H4.7a1.5 1.5 0 0 1-1.2-2.5l.5-.6a4 4 0 0 0 1-2.7V10a7 7 0 0 1 7-7Zm0 19a3 3 0 0 0 2.8-2H9.2A3 3 0 0 0 12 22Z"
-                  />
-                </svg>
+                <img src="./assets/state-red-48.png" alt="" width="22" height="22" />
               </div>
               <h3 class="feature__title">Clear status</h3>
               <p class="feature__text">
-                See if you’re signed in, how many devices are active, and what’s
-                enabled at a glance.
+                See if you're signed in, how many devices are active, and what's enabled at a
+                glance.
               </p>
             </article>
 
             <article class="feature">
               <div class="feature__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" focusable="false">
-                  <path
-                    d="M7 2h10a2 2 0 0 1 2 2v16l-4-2-3 2-3-2-4 2V4a2 2 0 0 1 2-2Zm2 6h6v2H9V8Zm0 4h6v2H9v-2Z"
-                  />
-                </svg>
+                <img src="./assets/churomi-48.png" alt="" width="22" height="22" />
               </div>
               <h3 class="feature__title">Membership & billing</h3>
               <p class="feature__text">
@@ -130,11 +128,7 @@
 
             <article class="feature">
               <div class="feature__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" role="img" focusable="false">
-                  <path
-                    d="M12 3a9 9 0 1 1-9 9h2a7 7 0 1 0 7-7V3Zm1 5h-2v6l5 3 1-1.7-4-2.3V8Z"
-                  />
-                </svg>
+                <img src="./assets/state-dark-48.png" alt="" width="22" height="22" />
               </div>
               <h3 class="feature__title">Keep pages active</h3>
               <p class="feature__text">
@@ -156,14 +150,15 @@
             </div>
 
             <div class="cta__actions">
-              <a class="btn btn--primary" href="#" id="cwsLink">Chrome Web Store</a>
+              <a
+                class="btn btn--primary"
+                href="https://chromewebstore.google.com/detail/churomi/oolnblmnhadiikagmhoahdaoiednoodk"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Chrome Web Store</a
+              >
               <a class="btn btn--ghost" href="#support">Contact support</a>
             </div>
-          </div>
-
-          <div class="note">
-            <strong>Tip:</strong> Replace the “Chrome Web Store” link with your
-            listing URL once it’s ready.
           </div>
         </div>
       </section>
@@ -213,10 +208,6 @@
 
     <script>
       document.getElementById("year").textContent = String(new Date().getFullYear());
-      const cwsLink = document.getElementById("cwsLink");
-      // Replace with your Chrome Web Store listing URL.
-      cwsLink.setAttribute("href", "#");
     </script>
   </body>
 </html>
-
