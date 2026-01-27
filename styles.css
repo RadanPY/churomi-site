@@ -1,8 +1,8 @@
 :root {
   --bg: #fff7fd;
-  --bg2: #f7f3ff;
-  --card: rgba(255, 255, 255, 0.72);
-  --card-border: rgba(148, 163, 184, 0.28);
+  --bg2: #f8f6ff;
+  --card: rgba(255, 255, 255, 0.82);
+  --card-border: rgba(148, 163, 184, 0.22);
   --text: #0f172a;
   --muted: #475569;
   --primary: #ec4899;
@@ -36,9 +36,9 @@ body {
     "Segoe UI Emoji";
   line-height: 1.55;
   background:
-    radial-gradient(900px 500px at 20% 10%, rgba(236, 72, 153, 0.25), transparent 60%),
-    radial-gradient(700px 420px at 80% 0%, rgba(168, 85, 247, 0.22), transparent 60%),
-    radial-gradient(900px 520px at 70% 90%, rgba(244, 114, 182, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 20% 10%, rgba(236, 72, 153, 0.16), transparent 60%),
+    radial-gradient(700px 420px at 80% 0%, rgba(168, 85, 247, 0.14), transparent 60%),
+    radial-gradient(900px 520px at 70% 90%, rgba(244, 114, 182, 0.12), transparent 60%),
     linear-gradient(180deg, var(--bg), var(--bg2));
 }
 
@@ -323,9 +323,7 @@ a:hover {
 }
 
 .section--alt {
-  background: rgba(255, 255, 255, 0.45);
-  border-top: 1px solid rgba(148, 163, 184, 0.18);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  background: transparent;
 }
 
 .section__title {
@@ -360,8 +358,9 @@ a:hover {
   border-radius: 14px;
   display: grid;
   place-items: center;
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.16), rgba(168, 85, 247, 0.14));
-  border: 1px solid rgba(236, 72, 153, 0.18);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
   margin-bottom: 10px;
 }
 
@@ -395,9 +394,10 @@ a:hover {
   gap: 18px;
   flex-wrap: wrap;
   border-radius: var(--radius);
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.16), rgba(168, 85, 247, 0.14));
-  border: 1px solid rgba(236, 72, 153, 0.2);
+  background: var(--card);
+  border: 1px solid rgba(236, 72, 153, 0.18);
   padding: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
 }
 
 .cta__actions {
