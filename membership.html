@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Start a Churomi membership and continue to Stripe Checkout.">
+    <title>Churomi — Membership</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/churomi-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/churomi-32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="./assets/churomi-48.png">
+    <link rel="apple-touch-icon" href="./assets/churomi-128.png">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="header">
+      <div class="container header__inner">
+        <a class="brand" aria-label="Churomi" href="./index.html">
+          <div class="brand__mark" aria-hidden="true">
+            <img src="./assets/churomi-48.png" alt="" width="34" height="34">
+          </div>
+          <span class="brand__name">Churomi</span>
+        </a>
+
+        <div class="header__right">
+          <nav class="nav" aria-label="Primary">
+            <a class="nav__link" href="./index.html#features">Features</a>
+            <a class="nav__link" href="./index.html#install">Install</a>
+            <a class="nav__link" href="./membership.html" aria-current="page">Membership</a>
+            <a class="nav__link" href="./index.html#support">Support</a>
+            <a class="nav__link" href="./privacy.html">Privacy</a>
+            <a class="nav__link" href="./terms.html">Terms</a>
+          </nav>
+
+          <div class="lang" aria-label="Language">
+            <a class="lang__link lang__link--active" href="./membership.html" aria-current="page">EN</a>
+            <a class="lang__link" href="./zh/membership.html">简体中文</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section">
+        <div class="container">
+          <div class="auth">
+            <div class="auth__copy">
+              <p class="hero__eyebrow">Membership</p>
+              <h1 class="hero__title">Start your Churomi membership</h1>
+              <p class="hero__subtitle">
+                Sign in (or create an account), then continue to Stripe Checkout.
+                After payment, install the extension and sign in with the same email.
+              </p>
+
+              <div class="pricing" aria-label="Membership pricing">
+                <div class="pricing__top">
+                  <div class="pricing__label">Monthly subscription</div>
+                  <div class="pricing__price">
+                    <span class="pricing__amount">CAD 30</span>
+                    <span class="pricing__period">/ month</span>
+                  </div>
+                </div>
+                <ul class="pricing__bullets">
+                  <li>Hide activity + invisible mode</li>
+                  <li>Keep supported pages active when switching tabs</li>
+                  <li>Manage billing in the extension menu</li>
+                </ul>
+                <p class="pricing__note">Auto-renew optional. Final price is shown at checkout.</p>
+              </div>
+
+              <div class="trust" aria-label="Trust &amp; policies">
+                <div class="trust__row">
+                  <span class="trust__item">Secure payments by Stripe</span>
+                  <span class="trust__sep" aria-hidden="true">•</span>
+                  <span class="trust__item">Cancel anytime</span>
+                  <span class="trust__sep" aria-hidden="true">•</span>
+                  <a class="trust__link" href="https://chromewebstore.google.com/detail/churomi/oolnblmnhadiikagmhoahdaoiednoodk" target="_blank" rel="noopener noreferrer">Chrome Web Store listing</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="auth__panel">
+              <div class="card">
+                <div class="card__header">
+                  <div class="pill">
+                    <span class="pill__dot" aria-hidden="true"></span>
+                    <span>Checkout</span>
+                  </div>
+                  <div class="pill pill--soft" id="authStatus">Not signed in</div>
+                </div>
+                <div class="card__body">
+                  <div class="tabs" role="tablist" aria-label="Auth mode">
+                    <button class="tab tab--active" type="button" id="tabSignIn" aria-controls="panelSignIn" aria-selected="true">Sign in</button>
+                    <button class="tab" type="button" id="tabSignUp" aria-controls="panelSignUp" aria-selected="false">Create account</button>
+                  </div>
+
+                  <div id="panelSignIn" class="panel" role="tabpanel" aria-labelledby="tabSignIn">
+                    <form id="signInForm" class="form">
+                      <label class="field">
+                        <span class="field__label">Email</span>
+                        <input class="input" type="email" name="email" autocomplete="email" required>
+                      </label>
+                      <label class="field">
+                        <span class="field__label">Password</span>
+                        <input class="input" type="password" name="password" autocomplete="current-password" minlength="6" required>
+                      </label>
+                      <div class="form__actions">
+                        <button class="btn btn--primary" type="submit" id="btnSignIn">Continue</button>
+                        <button class="btn btn--ghost" type="button" id="btnForgot">Reset password</button>
+                      </div>
+                      <div class="msg" id="signInMsg" role="status" aria-live="polite"></div>
+                    </form>
+                  </div>
+
+                  <div id="panelSignUp" class="panel" role="tabpanel" aria-labelledby="tabSignUp" hidden>
+                    <form id="signUpForm" class="form">
+                      <label class="field">
+                        <span class="field__label">Email</span>
+                        <input class="input" type="email" name="email" autocomplete="email" required>
+                      </label>
+                      <label class="field">
+                        <span class="field__label">Password</span>
+                        <input class="input" type="password" name="password" autocomplete="new-password" minlength="6" required>
+                      </label>
+                      <div class="form__actions">
+                        <button class="btn btn--primary" type="submit" id="btnSignUp">Create &amp; send verification</button>
+                      </div>
+                      <div class="msg" id="signUpMsg" role="status" aria-live="polite"></div>
+                    </form>
+                  </div>
+
+                  <div class="verify" id="verifyBox" hidden>
+                    <p class="muted" style="margin: 0 0 10px;">
+                      Your email is not verified yet. Please check your inbox, then come back and sign in again.
+                    </p>
+                    <button class="btn btn--soft" type="button" id="btnResendVerify">Resend verification email</button>
+                    <div class="msg" id="verifyMsg" role="status" aria-live="polite"></div>
+                  </div>
+
+                  <div class="checkout" id="checkoutBox" hidden>
+                    <label class="check">
+                      <input type="checkbox" id="autoRenew" checked>
+                      <span>Auto-renew monthly (recommended)</span>
+                    </label>
+                    <button class="btn btn--primary" type="button" id="btnCheckout">Open Stripe Checkout</button>
+                    <div class="msg" id="checkoutMsg" role="status" aria-live="polite"></div>
+                    <p class="muted" style="margin: 10px 0 0; font-size: 13px;">
+                      You’ll be redirected to Stripe. After payment, install the extension and sign in with the same email, then click <b>Refresh</b>.
+                    </p>
+                  </div>
+                </div>
+                <div class="card__footer">
+                  Need help? Email <a href="mailto:churomi.app@gmail.com">churomi.app@gmail.com</a>.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner" style="border-top: none;">
+        <p class="muted">© <span id="year">2026</span> Churomi</p>
+        <p class="footer__links">
+          <a href="./privacy.html">Privacy</a>
+          <a href="./terms.html">Terms</a>
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      const FIREBASE_API_KEY = "AIzaSyARbeEdX9o6qitX0YW2w-OkxrZPutSP7JM";
+      const API_BASE = "https://api.churomi.com";
+
+      const $ = (id) => document.getElementById(id);
+      const els = {
+        authStatus: $("authStatus"),
+        tabSignIn: $("tabSignIn"),
+        tabSignUp: $("tabSignUp"),
+        panelSignIn: $("panelSignIn"),
+        panelSignUp: $("panelSignUp"),
+        signInForm: $("signInForm"),
+        signUpForm: $("signUpForm"),
+        btnForgot: $("btnForgot"),
+        signInMsg: $("signInMsg"),
+        signUpMsg: $("signUpMsg"),
+        verifyBox: $("verifyBox"),
+        btnResendVerify: $("btnResendVerify"),
+        verifyMsg: $("verifyMsg"),
+        checkoutBox: $("checkoutBox"),
+        autoRenew: $("autoRenew"),
+        btnCheckout: $("btnCheckout"),
+        checkoutMsg: $("checkoutMsg"),
+      };
+
+      const setMsg = (el, text, kind) => {
+        if (!el) return;
+        el.textContent = text || "";
+        el.dataset.kind = kind || "";
+      };
+
+      const getDeviceId = () => {
+        try {
+          const key = "churomi_device_id";
+          const existing = localStorage.getItem(key);
+          if (existing) return existing;
+          const created = crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2);
+          localStorage.setItem(key, created);
+          return created;
+        } catch {
+          return "web-" + String(Date.now());
+        }
+      };
+
+      const firebasePost = async (method, body) => {
+        const res = await fetch(`https://identitytoolkit.googleapis.com/v1/${method}?key=${encodeURIComponent(FIREBASE_API_KEY)}`, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(body),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(data?.error?.message || data?.error || `${method} ${res.status}`);
+        return data;
+      };
+
+      const lookupEmailVerified = async (idToken) => {
+        const data = await firebasePost("accounts:lookup", { idToken });
+        const users = Array.isArray(data?.users) ? data.users : [];
+        const user = users[0] || {};
+        return Boolean(user.emailVerified);
+      };
+
+      const sendEmailVerification = async (idToken) => firebasePost("accounts:sendOobCode", { requestType: "VERIFY_EMAIL", idToken });
+      const sendPasswordReset = async (email) => firebasePost("accounts:sendOobCode", { requestType: "PASSWORD_RESET", email });
+
+      const setSignedIn = (auth) => {
+        window.__auth = auth || null;
+        els.authStatus.textContent = auth?.email ? `Signed in: ${auth.email}` : "Not signed in";
+        els.checkoutBox.hidden = !auth;
+      };
+
+      const showPanel = (mode) => {
+        const isSignIn = mode === "signin";
+        els.tabSignIn.classList.toggle("tab--active", isSignIn);
+        els.tabSignUp.classList.toggle("tab--active", !isSignIn);
+        els.tabSignIn.setAttribute("aria-selected", String(isSignIn));
+        els.tabSignUp.setAttribute("aria-selected", String(!isSignIn));
+        els.panelSignIn.hidden = !isSignIn;
+        els.panelSignUp.hidden = isSignIn;
+        els.verifyBox.hidden = true;
+        setMsg(els.signInMsg, "");
+        setMsg(els.signUpMsg, "");
+        setMsg(els.verifyMsg, "");
+      };
+
+      els.tabSignIn.addEventListener("click", () => showPanel("signin"));
+      els.tabSignUp.addEventListener("click", () => showPanel("signup"));
+
+      els.signInForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        els.verifyBox.hidden = true;
+        setMsg(els.signInMsg, "Signing in…");
+        try {
+          const fd = new FormData(els.signInForm);
+          const email = String(fd.get("email") || "").trim();
+          const password = String(fd.get("password") || "");
+          const auth = await firebasePost("accounts:signInWithPassword", { email, password, returnSecureToken: true });
+          const verified = await lookupEmailVerified(auth.idToken);
+          if (!verified) {
+            setSignedIn(null);
+            els.verifyBox.hidden = false;
+            window.__pendingVerify = { idToken: auth.idToken };
+            setMsg(els.signInMsg, "Email verification required.", "warn");
+            return;
+          }
+          setSignedIn({ idToken: auth.idToken, email: auth.email });
+          setMsg(els.signInMsg, "Signed in. Ready for checkout.", "ok");
+        } catch (err) {
+          setSignedIn(null);
+          setMsg(els.signInMsg, err?.message || "Sign-in failed.", "err");
+        }
+      });
+
+      els.signUpForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        setMsg(els.signUpMsg, "Creating account…");
+        try {
+          const fd = new FormData(els.signUpForm);
+          const email = String(fd.get("email") || "").trim();
+          const password = String(fd.get("password") || "");
+          const auth = await firebasePost("accounts:signUp", { email, password, returnSecureToken: true });
+          await sendEmailVerification(auth.idToken);
+          setMsg(els.signUpMsg, "Check your email to verify, then switch to Sign in.", "ok");
+        } catch (err) {
+          setMsg(els.signUpMsg, err?.message || "Sign-up failed.", "err");
+        }
+      });
+
+      els.btnForgot.addEventListener("click", async () => {
+        setMsg(els.signInMsg, "");
+        const email = String(new FormData(els.signInForm).get("email") || "").trim();
+        if (!email) return setMsg(els.signInMsg, "Enter your email first, then click Reset password.", "warn");
+        setMsg(els.signInMsg, "Sending password reset…");
+        try {
+          await sendPasswordReset(email);
+          setMsg(els.signInMsg, "Password reset email sent.", "ok");
+        } catch (err) {
+          setMsg(els.signInMsg, err?.message || "Failed to send reset email.", "err");
+        }
+      });
+
+      els.btnResendVerify.addEventListener("click", async () => {
+        setMsg(els.verifyMsg, "Resending…");
+        try {
+          const idToken = window.__pendingVerify?.idToken;
+          if (!idToken) throw new Error("Please sign in again.");
+          await sendEmailVerification(idToken);
+          setMsg(els.verifyMsg, "Verification email sent. Check your inbox/spam.", "ok");
+        } catch (err) {
+          setMsg(els.verifyMsg, err?.message || "Failed to resend verification.", "err");
+        }
+      });
+
+      els.btnCheckout.addEventListener("click", async () => {
+        setMsg(els.checkoutMsg, "Creating Stripe session…");
+        try {
+          const idToken = window.__auth?.idToken;
+          if (!idToken) throw new Error("Please sign in first.");
+          const res = await fetch(`${API_BASE}/api/billing/checkout`, {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+              "authorization": `Bearer ${idToken}`,
+              "x-device-id": getDeviceId(),
+            },
+            body: JSON.stringify({ auto_renew: Boolean(els.autoRenew.checked) }),
+          });
+          const data = await res.json().catch(() => ({}));
+          if (!res.ok) throw new Error(data?.error || `Checkout failed (${res.status})`);
+          if (!data?.url) throw new Error("Missing Stripe Checkout URL.");
+          setMsg(els.checkoutMsg, "Redirecting…", "ok");
+          location.href = data.url;
+        } catch (err) {
+          setMsg(els.checkoutMsg, err?.message || "Checkout failed.", "err");
+        }
+      });
+
+      showPanel("signin");
+    </script>
+  </body>
+</html>
+

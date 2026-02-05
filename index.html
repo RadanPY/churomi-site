@@ -15,6 +15,7 @@
           <nav class="nav" aria-label="Primary">
             <a class="nav__link" href="#features" data-edit="nav.features">Features</a>
             <a class="nav__link" href="#install" data-edit="nav.install">Install</a>
+            <a class="nav__link" href="./membership.html" data-edit="nav.membership">Membership</a>
             <a class="nav__link" href="#support" data-edit="nav.support">Support</a>
             <a class="nav__link" href="./privacy.html" data-edit="nav.privacy">Privacy</a>
             <a class="nav__link" href="./terms.html" data-edit="nav.terms">Terms</a>
@@ -37,9 +38,38 @@
                 Churomi helps you to avoid spy ware from school exam sites to keep supported pages from pausing
                 when switching tabs.&nbsp;</span></p>
 
-            <div class="hero__cta">
-              <a class="btn btn--primary" href="#install" data-edit="hero.ctaPrimary">Get Churomi</a>
-              <a class="btn btn--ghost" href="#features" data-edit="hero.ctaSecondary">See features</a>
+            <div class="hero__value" aria-label="Membership details">
+              <div class="pricing" role="group" aria-label="Membership pricing">
+                <div class="pricing__top">
+                  <div class="pricing__label" data-edit="pricing.label">Membership</div>
+                  <div class="pricing__price">
+                    <span class="pricing__amount" data-edit="pricing.amount">CAD 30</span>
+                    <span class="pricing__period" data-edit="pricing.period">/ month</span>
+                  </div>
+                </div>
+                <ul class="pricing__bullets">
+                  <li data-edit="pricing.bullets.0">Hide activity + invisible mode</li>
+                  <li data-edit="pricing.bullets.1">Keep supported pages active when switching tabs</li>
+                  <li data-edit="pricing.bullets.2">Works across your signed-in devices</li>
+                </ul>
+                <p class="pricing__note" data-edit="pricing.note">Auto-renew optional. Final price is shown at checkout.</p>
+              </div>
+
+              <div class="trust" aria-label="Trust &amp; policies">
+                <div class="trust__row">
+                  <span class="trust__item" data-edit="trust.items.0">Secure payments by Stripe</span>
+                  <span class="trust__sep" aria-hidden="true">•</span>
+                  <span class="trust__item" data-edit="trust.items.1">Cancel anytime</span>
+                  <span class="trust__sep" aria-hidden="true">•</span>
+                  <a class="trust__link" href="https://chromewebstore.google.com/detail/churomi/oolnblmnhadiikagmhoahdaoiednoodk" target="_blank" rel="noopener noreferrer" data-edit="trust.items.2" data-edit-href="install.cwsUrl">Chrome Web Store listing</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__cta" aria-label="Primary actions">
+              <a class="btn btn--primary" href="./membership.html" data-edit="hero.ctaPrimary" data-edit-href="hero.membershipUrl">Start membership</a>
+              <a class="btn btn--ghost" href="https://chromewebstore.google.com/detail/churomi/oolnblmnhadiikagmhoahdaoiednoodk" target="_blank" rel="noopener noreferrer" data-edit="hero.ctaSecondary" data-edit-href="install.cwsUrl">Install extension</a>
+              <a class="hero__link" href="#features" data-edit="hero.ctaTertiary">See features</a>
             </div>
 
             <p class="hero__note">
